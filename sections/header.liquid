@@ -49,7 +49,7 @@
                             <ul class="absolute m-0 pt-2 flex flex-col gap-2" data-dropdown-item>
                                 {% for childLink in link.links %}
                                     <li class="shadow rounded">
-                                        <a href="{{ childLink.url }}" class="block text-black uppercase bg-gray-200 rounded px-6 py-4" data-nav="header-desktop" data-nav-location="{{ childLink.url }}" data-nav-text="{{ childLink.title }}">{{ childLink.title | escape }}</a>
+                                        <a href="{{ childLink.url }}" class="block uppercase rounded px-6 py-4" data-nav="header-desktop" data-nav-location="{{ childLink.url }}" data-nav-text="{{ childLink.title }}">{{ childLink.title | escape }}</a>
                                     </li>
                                 {% endfor %}
                             </ul>
