@@ -42,8 +42,9 @@
 
     {{ 'main.css' | asset_url | stylesheet_tag }}
 
+    {% comment %} Customiser set styles {% endcomment %}
 </head>
-<body class="bg-blue-500">
+<body>
     {% comment %}{% section 'top-info-bar' %}{% endcomment %}
 
     {% section 'header' %}

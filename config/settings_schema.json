@@ -1,3 +1,26 @@
 [
-
+  {
+    "name": "Logo",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Logo"
+      },
+      {
+        "type": "image_picker",
+        "label": "Logo",
+        "id": "logo"
+      },
+      {
+        "type": "header",
+        "content": "Favicon"
+      },
+      {
+        "type": "image_picker",
+        "label": "Favicon",
+        "id": "favicon",
+        "info": "Upload a 32x32px PNG image that will be used as your favicon."
+      }
+    ]
+  }
 ]
