@@ -1,0 +1,58 @@
+<header class="w-full h-16 md:h-20 bg-gray-800">
+    <div class="w-full h-full max-w-7xl mx-auto flex items-center px-2">
+
+        {% comment %} Store logo start {% endcomment %}
+        <div class="min-w-max">
+            <a href="{{ shop.url }}" class="flex items-center gap-4">
+                {% if shop.logo %}
+                    <img src="{{ shop.logo | img_url: '200x200' }}" alt="{{ shop.name }}" class="w-8 h-8 md:w-10 md:h-10">
+                {% else %}
+                    <div class="w-8 md:w-12 h-8 md:h-12 rounded-full bg-white"></div>
+                {% endif %}
+            </a>
+        </div>
+        {% comment %} Store logo end {% endcomment %}
+
+        {% comment %} Desktop nav start {% endcomment %}
+        <div class="hidden md:flex w-full justify-end" id="navbarDesktopNav">
+            <ul class="flex">
+                {% for link in section.settings.main_nav.links %}
+                    <li class="relative" {% if link.links.size > 0 %} data-hover-item {% endif %}>
+                        <a href="{{ link.url }}" class="text-white uppercase md:mx-4 flex items-center gap-4 p-4 md:px-0" data-nav="header-desktop" data-nav-location="{{ link.url }}" data-nav-text="{{ link.title }}">
+                            {{ link.title | escape }}
+                            <span>
+                                {% if link.links.size > 0 %} {% render 'icon-chevron-down', class: 'verical-align-unset' %} {% endif %}
+                            </span>
+                        </a>
+                        {% if link.links.size > 0 %}
+                            <ul class="absolute m-0 pt-2 flex flex-col gap-2" data-dropdown-item>
+                                {% for childLink in link.links %}
+                                    <li class="shadow rounded">
+                                        <a href="{{ childLink.url }}" class="block text-black uppercase bg-gray-200 rounded px-6 py-4" data-nav="header-desktop" data-nav-location="{{ childLink.url }}" data-nav-text="{{ childLink.title }}">{{ childLink.title | escape }}</a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% comment %} Desktop nav end {% endcomment %}
+
+    </div>
+</header>
+
+{% schema %}
+{
+  "name": "Header",
+  "tag": "section",
+  "class": "header-section",
+  "settings": [
+    {
+      "type": "link_list",
+      "id": "main_nav",
+      "label": "Main Navigation"
+    }
+  ]
+}
+{% endschema %}
