@@ -1,4 +1,11 @@
-<header class="w-full h-16 md:h-20 bg-gray-800">
+{% style %}
+    header.header-customiser-styles {
+        background-color: {% if settings.header_background_color %} {{ settings.header_background_color }} {% else %} #ffffff {% endif %};
+        color: {% if settings.header_text_color %} {{ settings.header_text_color }} {% else %} #000000 {% endif %};
+    }
+{% endstyle %}
+
+<header class="header-customiser-styles w-full h-16 md:h-20">
     <div class="w-full h-full max-w-7xl mx-auto flex items-center px-2">
 
         {% comment %} Store logo start {% endcomment %}
@@ -32,7 +39,7 @@
             <ul class="flex">
                 {% for link in section.settings.main_nav.links %}
                     <li class="relative" {% if link.links.size > 0 %} data-hover-item {% endif %}>
-                        <a href="{{ link.url }}" class="text-white uppercase md:mx-4 flex items-center gap-4 p-4 md:px-0" data-nav="header-desktop" data-nav-location="{{ link.url }}" data-nav-text="{{ link.title }}">
+                        <a href="{{ link.url }}" class="uppercase md:mx-4 flex items-center gap-4 p-4 md:px-0" data-nav="header-desktop" data-nav-location="{{ link.url }}" data-nav-text="{{ link.title }}">
                             {{ link.title | escape }}
                             <span>
                                 {% if link.links.size > 0 %} {% render 'icon-chevron-down', class: 'verical-align-unset' %} {% endif %}

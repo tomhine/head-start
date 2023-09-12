@@ -22,5 +22,26 @@
         "info": "Upload a 32x32px PNG image that will be used as your favicon."
       }
     ]
+  },
+  {
+    "name": "Header",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Colors"
+      },
+      {
+        "type": "color_picker",
+        "label": "Background",
+        "id": "header_background_color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color_picker",
+        "label": "Text",
+        "id": "header_text_color",
+        "default": "#000000"
+      }
+    ]
   }
 ]
