@@ -28,9 +28,9 @@ document.addEventListener("DOMContentLoaded", function () {
     toggle.addEventListener("click", function (e) {
       var target = document.querySelector(e.target.dataset.tsTarget);
       if (target.classList.contains("hidden")) {
-        openOffcanvas(target);
+        openOffcanvas(e.target.dataset.tsTarget);
       } else {
-        closeOffcanvas(target);
+        closeOffcanvas(e.target.dataset.tsTarget);
       }
     });
   });
