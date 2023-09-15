@@ -27,9 +27,9 @@ document.addEventListener("DOMContentLoaded", function () {
     toggle.addEventListener("click", function (e) {
       var target = document.querySelector(e.target.dataset.tsTarget);
       if (target.classList.contains("show")) {
-        openOffcanvas(e.target.dataset.tsTarget);
-      } else {
         closeOffcanvas(e.target.dataset.tsTarget);
+      } else {
+        openOffcanvas(e.target.dataset.tsTarget);
       }
     });
   });
