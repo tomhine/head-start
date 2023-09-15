@@ -385,6 +385,9 @@ video {
 [hidden] {
   display: none;
 }
+  svg {
+  pointer-events: none;
+}
 
 *, ::before, ::after {
   --tw-border-spacing-x: 0;

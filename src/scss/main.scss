@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  svg {
+    @apply pointer-events-none;
+  }
+}
+
 @layer components {
   .container {
     @apply w-full max-w-7xl mx-auto px-4;
