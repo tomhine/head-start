@@ -33,7 +33,7 @@ function openOffcanvas(target) {
         backdrop.classList.remove("opacity-0");
     }, 0);
 
-    document.body.classList.add("overflow-hidden");
+    document.documentElement.classList.add("overflow-hidden");
 
     offcanvas.classList.add("show");
 }
