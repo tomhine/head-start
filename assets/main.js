@@ -24,12 +24,12 @@ __webpack_require__.r(__webpack_exports__);
 document.addEventListener("DOMContentLoaded", function () {
   var offcanvasToggles = document.querySelectorAll("[data-ts-toggle=offcanvas]");
   offcanvasToggles.forEach(function (toggle) {
-    toggle.addEventListener("click", function () {
-      var target = document.querySelector(toggle.dataset.target);
+    toggle.addEventListener("click", function (e) {
+      var target = document.querySelector(e.target.dataset.target);
       console.log(target);
       if (target.classList.contains("hidden")) {
         var backdrop = document.createElement("div");
-        backdrop.classList.add("ts-backdrop");
+        backdrop.classList.add("backdrop");
         backdrop.setAttribute("data-ts.backdrop", "");
         backdrop.setAttribute("data-ts.target", toggle.dataset.target);
         document.body.appendChild(backdrop);
@@ -38,7 +38,8 @@ document.addEventListener("DOMContentLoaded", function () {
       } else {
         var _backdrop = document.querySelector("[data-ts-backdrop]");
         if (_backdrop) {
-          _backdrop.classList.add("hidden");
+          _backdrop.remove();
+          document.body.classList.remove("overflow-hidden");
         }
         target.classList.add("hidden");
       }
