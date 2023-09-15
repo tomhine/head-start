@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
         toggle.addEventListener("click", (e) => {
             const target = document.querySelector(e.target.dataset.tsTarget);
 
-            if (target.classList.contains("hidden")) {
+            if (target.classList.contains("show")) {
                 openOffcanvas(e.target.dataset.tsTarget);
             } else {
                 closeOffcanvas(e.target.dataset.tsTarget);
