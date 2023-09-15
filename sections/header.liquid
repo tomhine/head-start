@@ -43,7 +43,7 @@
         </div>
 
         {% comment %} Desktop nav start {% endcomment %}
-        <div class="hidden md:flex w-full justify-end" id="navbarDesktopNav">
+        <div class="hidden md:block" id="navbarDesktopNav">
             <ul class="flex">
                 {% for link in section.settings.main_nav.links %}
                     <li class="relative" {% if link.links.size > 0 %} data-hover-item {% endif %}>
