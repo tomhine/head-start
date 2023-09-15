@@ -25,14 +25,14 @@ document.addEventListener("DOMContentLoaded", function () {
   var offcanvasToggles = document.querySelectorAll("[data-ts-toggle=offcanvas]");
   offcanvasToggles.forEach(function (toggle) {
     toggle.addEventListener("click", function (e) {
-      var target = document.querySelector(e.target.dataset.target);
+      var target = document.querySelector(e.target.dataset.tsTarget);
       console.log('event: ', e);
       console.log('target: ', target);
       if (target.classList.contains("hidden")) {
         var backdrop = document.createElement("div");
         backdrop.classList.add("backdrop");
-        backdrop.setAttribute("data-ts.backdrop", "");
-        backdrop.setAttribute("data-ts.target", toggle.dataset.target);
+        backdrop.setAttribute("data-ts-backdrop", "");
+        backdrop.setAttribute("data-ts-target", toggle.dataset.tsTarget);
         document.body.appendChild(backdrop);
         document.body.classList.add("overflow-hidden");
         target.classList.remove("hidden");
