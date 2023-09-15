@@ -26,7 +26,8 @@ document.addEventListener("DOMContentLoaded", function () {
   offcanvasToggles.forEach(function (toggle) {
     toggle.addEventListener("click", function (e) {
       var target = document.querySelector(e.target.dataset.target);
-      console.log(target);
+      console.log('event: ', e);
+      console.log('target: ', target);
       if (target.classList.contains("hidden")) {
         var backdrop = document.createElement("div");
         backdrop.classList.add("backdrop");
