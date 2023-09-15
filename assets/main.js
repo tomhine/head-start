@@ -23,7 +23,6 @@ __webpack_require__.r(__webpack_exports__);
 
 document.addEventListener("DOMContentLoaded", function () {
   var offcanvasToggles = document.querySelectorAll("[data-ts-toggle=offcanvas]");
-  var offcanvasCloses = document.querySelectorAll("[data-ts-dismiss=offcanvas]");
   offcanvasToggles.forEach(function (toggle) {
     toggle.addEventListener("click", function (e) {
       var target = document.querySelector(e.target.dataset.tsTarget);
@@ -34,16 +33,16 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
-  offcanvasCloses.forEach(function (close) {
-    close.addEventListener("click", function (e) {
+  document.addEventListener("click", function (e) {
+    if (e.target.dataset.tsDismiss === "offcanvas") {
       closeOffcanvas(e.target.dataset.tsTarget);
-    });
+    }
   });
 });
 function openOffcanvas(target) {
   var offcanvas = document.querySelector(target);
   var backdrop = document.createElement("div");
-  backdrop.classList.add(["backdrop", "opacity-0"]);
+  backdrop.classList.add("backdrop", "opacity-0");
   backdrop.setAttribute("data-ts-backdrop", "");
   backdrop.setAttribute("data-ts-target", target);
   backdrop.setAttribute("data-ts-dismiss", "offcanvas");

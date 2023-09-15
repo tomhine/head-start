@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
     const offcanvasToggles = document.querySelectorAll("[data-ts-toggle=offcanvas]");
-    const offcanvasCloses = document.querySelectorAll("[data-ts-dismiss=offcanvas]");
 
     offcanvasToggles.forEach((toggle) => {
         toggle.addEventListener("click", (e) => {
@@ -14,17 +13,17 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    offcanvasCloses.forEach((close) => {
-       close.addEventListener("click", (e) => {
-           closeOffcanvas(e.target.dataset.tsTarget);
-       });
+    document.addEventListener("click", (e) => {
+        if (e.target.dataset.tsDismiss === "offcanvas") {
+            closeOffcanvas(e.target.dataset.tsTarget);
+        }
     });
 });
 
 function openOffcanvas(target) {
     const offcanvas = document.querySelector(target);
     const backdrop = document.createElement("div");
-    backdrop.classList.add(["backdrop", "opacity-0"]);
+    backdrop.classList.add("backdrop", "opacity-0");
     backdrop.setAttribute("data-ts-backdrop", "");
     backdrop.setAttribute("data-ts-target", target);
     backdrop.setAttribute("data-ts-dismiss", "offcanvas")
