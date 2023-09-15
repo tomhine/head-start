@@ -1,12 +1,5 @@
-{% style %}
-    header.header-customiser-styles {
-        background-color: {% if settings.header_background_color %} {{ settings.header_background_color }} {% else %} #ffffff {% endif %};
-        color: {% if settings.header_text_color %} {{ settings.header_text_color }} {% else %} #000000 {% endif %};
-    }
-{% endstyle %}
-
 <header class="header-customiser-styles w-full h-16 md:h-20">
-    <div class="w-full h-full max-w-7xl mx-auto flex items-center px-2">
+    <div class="container h-full flex items-center">
 
         {% comment %} Store logo start {% endcomment %}
         <div class="min-w-max">
