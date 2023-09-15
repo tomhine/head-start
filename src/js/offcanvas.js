@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (target.classList.contains("hidden")) {
                 const backdrop = document.createElement("div");
-                backdrop.classList.add("ts-backdrop");
+                backdrop.classList.add("backdrop");
                 backdrop.setAttribute("data-ts.backdrop", "");
                 backdrop.setAttribute("data-ts.target", toggle.dataset.target);
                 document.body.appendChild(backdrop);
