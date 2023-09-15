@@ -1,8 +1,8 @@
 <header class="w-full h-16 md:h-20 shadow border-b">
-    <div class="container h-full flex items-center">
+    <div class="container h-full flex items-center justify-between mg:grid grid-cols-3 justify-items-center">
 
         {% comment %} Header left {% endcomment %}
-        <div class="min-w-max flex items-center gap-4">
+        <div class="min-w-max flex items-center gap-4 md:justify-self-start">
             {% comment %} Mobile nav toggle {% endcomment %}
             <div class="md:hidden">
                 <button
@@ -69,7 +69,7 @@
         {% comment %} Desktop nav end {% endcomment %}
 
         {% comment %} Header right {% endcomment %}
-        <div>
+        <div class="md:justify-self-end">
             <button
                 type="button"
                 class="btn btn-icon"

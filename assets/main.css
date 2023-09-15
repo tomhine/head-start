@@ -683,6 +683,9 @@ video {
   min-width: -moz-max-content;
   min-width: max-content;
 }
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
 .flex-col {
   flex-direction: column;
 }
@@ -694,6 +697,9 @@ video {
 }
 .justify-between {
   justify-content: space-between;
+}
+.justify-items-center {
+  justify-items: center;
 }
 .gap-2 {
   gap: 0.5rem;
@@ -760,6 +766,14 @@ video {
 
   .md\:h-20 {
     height: 5rem;
+  }
+
+  .md\:justify-self-start {
+    justify-self: start;
+  }
+
+  .md\:justify-self-end {
+    justify-self: end;
   }
 
   .md\:px-0 {
