@@ -1,8 +1,16 @@
-<header class="header-customiser-styles w-full h-16 md:h-20">
+<header class="w-full h-16 md:h-20 shadow border-b">
     <div class="container h-full flex items-center">
 
-        {% comment %} Store logo start {% endcomment %}
-        <div class="min-w-max">
+        {% comment %} Header left {% endcomment %}
+        <div class="min-w-max flex items-center gap-4">
+            {% comment %} Mobile nav toggle {% endcomment %}
+            <div class="md:hidden">
+                <button type="button" class="btn">
+                    {% render 'icon-menu' %}
+                </button>
+            </div>
+
+            {% comment %} Store logo start {% endcomment %}
             <a href="{{ shop.url }}" class="flex items-center gap-4">
                 {% if settings.logo %}
                     <div class="w-100 inline-block">
@@ -24,15 +32,15 @@
                     <span>{{ shop.name }}</span>
                 {% endif %}
             </a>
+            {% comment %} Store logo end {% endcomment %}
         </div>
-        {% comment %} Store logo end {% endcomment %}
 
         {% comment %} Desktop nav start {% endcomment %}
         <div class="hidden md:flex w-full justify-end" id="navbarDesktopNav">
             <ul class="flex">
                 {% for link in section.settings.main_nav.links %}
                     <li class="relative" {% if link.links.size > 0 %} data-hover-item {% endif %}>
-                        <a href="{{ link.url }}" class="uppercase md:mx-4 flex items-center gap-4 p-4 md:px-0" data-nav="header-desktop" data-nav-location="{{ link.url }}" data-nav-text="{{ link.title }}">
+                        <a href="{{ link.url }}" class="md:mx-4 flex items-center gap-4 p-4 md:px-0" data-nav="header-desktop" data-nav-location="{{ link.url }}" data-nav-text="{{ link.title }}">
                             {{ link.title | escape }}
                             <span>
                                 {% if link.links.size > 0 %} {% render 'icon-chevron-down', class: 'verical-align-unset' %} {% endif %}
@@ -42,7 +50,7 @@
                             <ul class="absolute m-0 pt-2 flex flex-col gap-2" data-dropdown-item>
                                 {% for childLink in link.links %}
                                     <li class="shadow rounded">
-                                        <a href="{{ childLink.url }}" class="block uppercase rounded px-6 py-4" data-nav="header-desktop" data-nav-location="{{ childLink.url }}" data-nav-text="{{ childLink.title }}">{{ childLink.title | escape }}</a>
+                                        <a href="{{ childLink.url }}" class="block rounded px-6 py-4" data-nav="header-desktop" data-nav-location="{{ childLink.url }}" data-nav-text="{{ childLink.title }}">{{ childLink.title | escape }}</a>
                                     </li>
                                 {% endfor %}
                             </ul>
