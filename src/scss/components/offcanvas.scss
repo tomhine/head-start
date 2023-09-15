@@ -1,6 +1,6 @@
 @layer components {
   .offcanvas {
-    @apply absolute z-50 bg-white w-full max-w-md min-h-screen top-0 transform transition;
+    @apply absolute z-50 bg-white w-full max-w-md min-h-screen top-0 transform transition duration-200;
 
     &-start {
       @apply left-0 -translate-x-full;
