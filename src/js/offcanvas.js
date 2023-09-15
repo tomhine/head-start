@@ -5,15 +5,12 @@ document.addEventListener("DOMContentLoaded", () => {
     offcanvasToggles.forEach((toggle) => {
         toggle.addEventListener("click", (e) => {
             const target = document.querySelector(e.target.dataset.tsTarget);
-            console.log('event: ', e);
-            console.log('target: ', target);
 
             if (target.classList.contains("hidden")) {
-                openOffcanvas(e.target.dataset.tsTarget);
+                openOffcanvas(target);
             } else {
-                closeOffcanvas(e.target.dataset.tsTarget);
+                closeOffcanvas(target);
             }
-            // target.classList.toggle("hidden");
         });
     });
 
@@ -27,10 +24,15 @@ document.addEventListener("DOMContentLoaded", () => {
 function openOffcanvas(target) {
     const offcanvas = document.querySelector(target);
     const backdrop = document.createElement("div");
-    backdrop.classList.add("backdrop");
+    backdrop.classList.add(["backdrop", "opacity-0"]);
     backdrop.setAttribute("data-ts-backdrop", "");
     backdrop.setAttribute("data-ts-target", target);
+    backdrop.setAttribute("data-ts-dismiss", "offcanvas")
     document.body.appendChild(backdrop);
+
+    setTimeout(() => {
+        backdrop.classList.remove("opacity-0");
+    }, 0);
 
     document.body.classList.add("overflow-hidden");
 
@@ -46,8 +48,13 @@ function closeOffcanvas(target) {
     const backdrop = document.querySelector("[data-ts-backdrop]");
 
     if (backdrop) {
-        backdrop.remove();
+        backdrop.classList.add("opacity-0");
+
         document.body.classList.remove("overflow-hidden");
+
+        setTimeout(() => {
+        backdrop.remove();
+        }, 250);
     }
 
     offcanvas.classList.add("opacity-0");

@@ -606,6 +606,9 @@ video {
   z-index: 40;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
   --tw-bg-opacity: 0.5;
+  transition-property: opacity;
+  transition-duration: 150ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .absolute {
   position: absolute;
