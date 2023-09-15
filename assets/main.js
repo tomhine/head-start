@@ -5,9 +5,47 @@
 /*!************************!*\
   !*** ./src/js/main.js ***!
   \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _offcanvas__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./offcanvas */ "./src/js/offcanvas.js");
+/* harmony import */ var _offcanvas__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_offcanvas__WEBPACK_IMPORTED_MODULE_0__);
+
+
+/***/ }),
+
+/***/ "./src/js/offcanvas.js":
+/*!*****************************!*\
+  !*** ./src/js/offcanvas.js ***!
+  \*****************************/
 /***/ (() => {
 
-
+document.addEventListener("DOMContentLoaded", function () {
+  var offcanvasToggles = document.querySelectorAll("[data-ts-toggle=offcanvas]");
+  offcanvasToggles.forEach(function (toggle) {
+    toggle.addEventListener("click", function () {
+      var target = document.querySelector(toggle.dataset.target);
+      console.log(target);
+      if (target.classList.contains("hidden")) {
+        var backdrop = document.createElement("div");
+        backdrop.classList.add("ts-backdrop");
+        backdrop.setAttribute("data-ts.backdrop", "");
+        backdrop.setAttribute("data-ts.target", toggle.dataset.target);
+        document.body.appendChild(backdrop);
+        document.body.classList.add("overflow-hidden");
+        target.classList.remove("hidden");
+      } else {
+        var _backdrop = document.querySelector("[data-ts-backdrop]");
+        if (_backdrop) {
+          _backdrop.classList.add("hidden");
+        }
+        target.classList.add("hidden");
+      }
+      target.classList.toggle("hidden");
+    });
+  });
+});
 
 /***/ }),
 
@@ -83,6 +121,30 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 				}
 /******/ 			}
 /******/ 			return result;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
 /******/ 		};
 /******/ 	})();
 /******/ 	
