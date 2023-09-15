@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function openOffcanvas(target) {
   var offcanvas = document.querySelector(target);
   var backdrop = document.createElement("div");
-  backdrop.classList.add("backdrop", "opacity-0");
+  backdrop.classList.add("offcanvas-backdrop", "opacity-0");
   backdrop.setAttribute("data-ts-backdrop", "");
   backdrop.setAttribute("data-ts-target", target);
   backdrop.setAttribute("data-ts-dismiss", "offcanvas");
@@ -51,11 +51,8 @@ function openOffcanvas(target) {
     backdrop.classList.remove("opacity-0");
   }, 0);
   document.body.classList.add("overflow-hidden");
-  offcanvas.classList.add("opacity-0");
   offcanvas.classList.remove("hidden");
-  setTimeout(function () {
-    offcanvas.classList.remove("opacity-0");
-  }, 250);
+  offcanvas.classList.add("show");
 }
 function closeOffcanvas(target) {
   var offcanvas = document.querySelector(target);
@@ -67,10 +64,9 @@ function closeOffcanvas(target) {
       backdrop.remove();
     }, 250);
   }
-  offcanvas.classList.add("opacity-0");
+  offcanvas.classList.remove("show");
   setTimeout(function () {
     offcanvas.classList.add("hidden");
-    offcanvas.classList.remove("opacity-0");
   }, 250);
 }
 

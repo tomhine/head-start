@@ -1,0 +1,17 @@
+@layer components {
+  .offcanvas {
+    @apply absolute z-50 bg-white w-full max-w-md min-h-screen top-0 hidden transform transition;
+
+    &-start {
+      @apply left-0 -translate-x-full;
+
+      &.show {
+        @apply translate-x-0;
+      }
+    }
+
+    &-backdrop {
+      @apply fixed inset-0 bg-black bg-opacity-50 z-40 transition-opacity ease-in-out duration-150;
+    }
+  }
+}
