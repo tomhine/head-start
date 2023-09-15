@@ -4,13 +4,13 @@
   <div class="flex gap-4 items-center">
     <button type="button" class="btn btn-primary">Primary</button>
     <button type="button" class="btn btn-secondary">Secondary</button>
-
-    {% comment %} testing overflow {% endcomment %}
-    {% for i in (1..100) %}
-      <button type="button" class="btn btn-primary">{{ i }}</button>
-    {% endfor %}
-
   </div>
+
+  {% comment %} testing overflow {% endcomment %}
+  {% for i in (1..100) %}
+    <button type="button" class="btn btn-primary">{{ i }}</button>
+  {% endfor %}
+
 </div>
 
 {% schema %}

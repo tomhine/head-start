@@ -4,10 +4,14 @@
 
     &-start {
       @apply left-0 -translate-x-full;
+    }
 
-      &.show {
-        @apply translate-x-0;
-      }
+    &-end {
+      @apply right-0 translate-x-full;
+    }
+
+    &.show {
+      @apply translate-x-0;
     }
 
     &-backdrop {

@@ -1,0 +1,21 @@
+<div class="offcanvas offcanvas-end" tabindex="-1" id="miniCart" aria-labelledby="miniCartLabel">
+    <div class="p-4 border-b flex items-center justify-between">
+        <h5 class="text-lg font-semibold" id="miniCartLabel">Shopping Bag</h5>
+        <button type="button" class="btn btn-icon" data-ts-dismiss="offcanvas" data-ts-target="#miniCartMenu" aria-label="Close">
+            {% render 'icon-close' %}
+        </button>
+    </div>
+    <div class="p-4">
+        <div>
+            Your bag is currently empty
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "Mini cart",
+  "tag": "section",
+  "class": "mini-cart-section"
+}
+{% endschema %}

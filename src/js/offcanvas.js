@@ -33,7 +33,7 @@ function openOffcanvas(target) {
         backdrop.classList.remove("opacity-0");
     }, 0);
 
-    document.documentElement.classList.add("overflow-hidden");
+    document.documentElement.style.overflow = "hidden";
 
     offcanvas.classList.add("show");
 }
@@ -45,7 +45,7 @@ function closeOffcanvas(target) {
     if (backdrop) {
         backdrop.classList.add("opacity-0");
 
-        document.body.classList.remove("overflow-hidden");
+        document.documentElement.style.overflow = "";
 
         setTimeout(() => {
         backdrop.remove();

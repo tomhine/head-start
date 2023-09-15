@@ -68,6 +68,20 @@
         </div>
         {% comment %} Desktop nav end {% endcomment %}
 
+        {% comment %} Header right {% endcomment %}
+        <div>
+            <button
+                type="button"
+                class="btn btn-icon"
+                aria-label="View your cart"
+                aria-controls="miniCart"
+                data-ts-toggle="offcanvas"
+                data-ts-target="#miniCart"
+            >
+                {% render 'icon-shopping-bag' %}
+            </button>
+        </div>
+
     </div>
 </header>
 
