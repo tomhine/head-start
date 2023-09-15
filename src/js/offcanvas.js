@@ -48,7 +48,7 @@ function closeOffcanvas(target) {
         document.documentElement.style.overflow = "";
 
         setTimeout(() => {
-        backdrop.remove();
+            backdrop.remove();
         }, 250);
     }
 
