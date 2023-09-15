@@ -35,7 +35,6 @@ function openOffcanvas(target) {
 
     document.body.classList.add("overflow-hidden");
 
-    offcanvas.classList.remove("hidden");
     offcanvas.classList.add("show");
 }
 
@@ -54,7 +53,4 @@ function closeOffcanvas(target) {
     }
 
     offcanvas.classList.remove("show");
-    setTimeout(() => {
-        offcanvas.classList.add("hidden");
-    }, 250);
 }

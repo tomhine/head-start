@@ -51,7 +51,6 @@ function openOffcanvas(target) {
     backdrop.classList.remove("opacity-0");
   }, 0);
   document.body.classList.add("overflow-hidden");
-  offcanvas.classList.remove("hidden");
   offcanvas.classList.add("show");
 }
 function closeOffcanvas(target) {
@@ -65,9 +64,6 @@ function closeOffcanvas(target) {
     }, 250);
   }
   offcanvas.classList.remove("show");
-  setTimeout(function () {
-    offcanvas.classList.add("hidden");
-  }, 250);
 }
 
 /***/ }),
