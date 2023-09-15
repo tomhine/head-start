@@ -23,31 +23,54 @@ __webpack_require__.r(__webpack_exports__);
 
 document.addEventListener("DOMContentLoaded", function () {
   var offcanvasToggles = document.querySelectorAll("[data-ts-toggle=offcanvas]");
+  var offcanvasCloses = document.querySelectorAll("[data-ts-dismiss=offcanvas]");
   offcanvasToggles.forEach(function (toggle) {
     toggle.addEventListener("click", function (e) {
       var target = document.querySelector(e.target.dataset.tsTarget);
       console.log('event: ', e);
       console.log('target: ', target);
       if (target.classList.contains("hidden")) {
-        var backdrop = document.createElement("div");
-        backdrop.classList.add("backdrop");
-        backdrop.setAttribute("data-ts-backdrop", "");
-        backdrop.setAttribute("data-ts-target", toggle.dataset.tsTarget);
-        document.body.appendChild(backdrop);
-        document.body.classList.add("overflow-hidden");
-        target.classList.remove("hidden");
+        openOffcanvas(e.target.dataset.tsTarget);
       } else {
-        var _backdrop = document.querySelector("[data-ts-backdrop]");
-        if (_backdrop) {
-          _backdrop.remove();
-          document.body.classList.remove("overflow-hidden");
-        }
-        target.classList.add("hidden");
+        closeOffcanvas(e.target.dataset.tsTarget);
       }
-      target.classList.toggle("hidden");
+      // target.classList.toggle("hidden");
+    });
+  });
+
+  offcanvasCloses.forEach(function (close) {
+    close.addEventListener("click", function (e) {
+      closeOffcanvas(e.target.dataset.tsTarget);
     });
   });
 });
+function openOffcanvas(target) {
+  var offcanvas = document.querySelector(target);
+  var backdrop = document.createElement("div");
+  backdrop.classList.add("backdrop");
+  backdrop.setAttribute("data-ts-backdrop", "");
+  backdrop.setAttribute("data-ts-target", target);
+  document.body.appendChild(backdrop);
+  document.body.classList.add("overflow-hidden");
+  offcanvas.classList.add("opacity-0");
+  offcanvas.classList.remove("hidden");
+  setTimeout(function () {
+    offcanvas.classList.remove("opacity-0");
+  }, 250);
+}
+function closeOffcanvas(target) {
+  var offcanvas = document.querySelector(target);
+  var backdrop = document.querySelector("[data-ts-backdrop]");
+  if (backdrop) {
+    backdrop.remove();
+    document.body.classList.remove("overflow-hidden");
+  }
+  offcanvas.classList.add("opacity-0");
+  setTimeout(function () {
+    offcanvas.classList.add("hidden");
+    offcanvas.classList.remove("opacity-0");
+  }, 250);
+}
 
 /***/ }),
 
