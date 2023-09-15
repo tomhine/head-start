@@ -5,7 +5,14 @@
         <div class="min-w-max flex items-center gap-4">
             {% comment %} Mobile nav toggle {% endcomment %}
             <div class="md:hidden">
-                <button type="button" class="btn btn-icon">
+                <button
+                    type="button"
+                    class="btn btn-icon"
+                    aria-label="toggle the mobile menu"
+                    aria-controls="mobileMenu"
+                    data-ts-toggle="offcanvas"
+                    data-ts-target="#mobileMenu"
+                >
                     {% render 'icon-menu' %}
                 </button>
             </div>
