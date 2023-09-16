@@ -4,9 +4,15 @@
       "type": "hero",
       "settings": {
       }
+    },
+    "product-carousel": {
+      "type": "product-carousel",
+      "settings": {
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "product-carousel"
   ]
 }

@@ -1,0 +1,17 @@
+<article class="relative shadow rounded-lg">
+    <div>
+        {{ product | image_url: width: 280 | image_tag: height: 280 }}
+    </div>
+
+    <div class="p-2 md:p-4">
+        <h3 class="text-lg font-semibold">
+            <a href="{{ product.url }}" class="hover:text-gray-700">
+                {{ product.title }}
+            </a>
+        </h3>
+
+        <div class="text-gray-600 text-sm">
+            {{ product.price | money }}
+        </div>
+    </div>
+</article>
