@@ -690,6 +690,9 @@ video {
   min-width: -moz-max-content;
   min-width: max-content;
 }
+.min-w-\[280px\] {
+  min-width: 280px;
+}
 .grid-cols-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
