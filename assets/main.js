@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function openOffcanvas(target) {
   var offcanvas = document.querySelector(target);
   var backdrop = document.createElement("div");
-  backdrop.classList.add("offcanvas-backdrop", "transition-opacity", "duration-300", "delay-100", "opacity-0");
+  backdrop.classList.add("offcanvas-backdrop", "transition-opacity", "duration-300", "opacity-0");
   backdrop.setAttribute("data-ts-backdrop", "");
   backdrop.setAttribute("data-ts-target", target);
   backdrop.setAttribute("data-ts-dismiss", "offcanvas");
@@ -58,7 +58,7 @@ function closeOffcanvas(target) {
   var backdrop = document.querySelector("[data-ts-backdrop]");
   offcanvas.classList.remove("show");
   if (backdrop) {
-    backdrop.classList.add("opacity-0");
+    backdrop.classList.add("delay-100", "opacity-0");
     document.documentElement.style.overflow = "";
     setTimeout(function () {
       backdrop.remove();
