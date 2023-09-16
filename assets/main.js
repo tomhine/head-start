@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function openOffcanvas(target) {
   var offcanvas = document.querySelector(target);
   var backdrop = document.createElement("div");
-  backdrop.classList.add("offcanvas-backdrop", "opacity-0");
+  backdrop.classList.add("offcanvas-backdrop", "transition-opacity", "opacity-0");
   backdrop.setAttribute("data-ts-backdrop", "");
   backdrop.setAttribute("data-ts-target", target);
   backdrop.setAttribute("data-ts-dismiss", "offcanvas");
