@@ -3,11 +3,16 @@
     "main": {
       "type": "hero",
       "settings": {
+        "title": "Hero Text",
+        "content": ""
       }
     },
     "product-carousel": {
       "type": "product-carousel",
       "settings": {
+        "title": "Our Products",
+        "subtitle": "",
+        "products_collection": "hydrogen"
       }
     }
   },
