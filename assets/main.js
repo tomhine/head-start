@@ -56,6 +56,7 @@ function openOffcanvas(target) {
 function closeOffcanvas(target) {
   var offcanvas = document.querySelector(target);
   var backdrop = document.querySelector("[data-ts-backdrop]");
+  offcanvas.classList.remove("show");
   if (backdrop) {
     backdrop.classList.add("opacity-0");
     document.documentElement.style.overflow = "";
@@ -63,7 +64,6 @@ function closeOffcanvas(target) {
       backdrop.remove();
     }, 250);
   }
-  offcanvas.classList.remove("show");
 }
 
 /***/ }),

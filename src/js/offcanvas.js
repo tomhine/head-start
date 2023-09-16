@@ -42,6 +42,8 @@ function closeOffcanvas(target) {
     const offcanvas = document.querySelector(target);
     const backdrop = document.querySelector("[data-ts-backdrop]");
 
+    offcanvas.classList.remove("show");
+
     if (backdrop) {
         backdrop.classList.add("opacity-0");
 
@@ -51,6 +53,4 @@ function closeOffcanvas(target) {
             backdrop.remove();
         }, 250);
     }
-
-    offcanvas.classList.remove("show");
 }
