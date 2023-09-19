@@ -3,7 +3,7 @@
         <button type="button" class="btn btn-icon" data-ts-dismiss="offcanvas" data-ts-target="#mobileMenu" aria-label="Close">
             {% render 'icon-close' %}
         </button>
-        <h5 class="text-lg font-semibold" id="mobileMenuLabel">Offcanvas</h5>
+        <h5 class="text-lg font-semibold" id="mobileMenuLabel">{{ section.settings.title }}</h5>
     </div>
     <div class="p-4">
         <div>
@@ -28,6 +28,19 @@
   "tag": "section",
   "class": "mobile-menu-section",
   "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Mobile menu"
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_title",
+      "label": "Hide title",
+      "default": false,
+      "info": "Use this to hide the section title. It will still be used to aid screen readers, so make sure to give it a meaningful title."
+    },
     {
       "type": "link_list",
       "id": "mobile_nav",
