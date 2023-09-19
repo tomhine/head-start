@@ -11,7 +11,7 @@
     }
 
     &-end {
-      @apply top-0 right-0 w-full -translate-x-full;
+      @apply top-0 right-0 w-full translate-x-full;
 
       &.moving {
         @apply translate-x-full;
