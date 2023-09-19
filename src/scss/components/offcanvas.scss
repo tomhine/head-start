@@ -1,21 +1,13 @@
 @layer components {
   .offcanvas {
-    @apply fixed bottom-0 z-50 bg-white max-w-md flex flex-col invisible transform transition;
+    @apply fixed bottom-0 z-50 bg-white max-w-md flex flex-col invisible transition-transform;
 
     &-start {
       @apply top-0 left-0 w-full -translate-x-full;
-
-      &.moving {
-        @apply -translate-x-full;
-      }
     }
 
     &-end {
       @apply top-0 right-0 w-full translate-x-full;
-
-      &.moving {
-        @apply translate-x-full;
-      }
     }
 
     &.show {
