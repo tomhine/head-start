@@ -11,6 +11,20 @@
         "type": "footer",
         "settings": {
         }
+      },
+      "mobile-menu": {
+        "type": "mobile-menu",
+        "settings": {
+          "title": "Mobile menu",
+          "hide_title": true,
+          "mobile_nav": "main-menu"
+        }
+      },
+      "mini-cart": {
+        "type": "mini-cart",
+        "settings": {
+          "title": "Shopping Bag"
+        }
       }
     },
     "content_for_index": [
