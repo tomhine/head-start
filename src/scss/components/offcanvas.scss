@@ -5,7 +5,7 @@
     &-start {
       @apply top-0 left-0 w-full -translate-x-full;
 
-      &.show {
+      &.hiding {
         @apply -translate-x-full;
       }
     }
