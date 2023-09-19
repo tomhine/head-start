@@ -51,12 +51,16 @@ function openOffcanvas(target) {
     backdrop.classList.remove("opacity-0");
   }, 0);
   document.documentElement.style.overflow = "hidden";
+  offcanvas.classList.remove("invisible");
   offcanvas.classList.add("show");
 }
 function closeOffcanvas(target) {
   var offcanvas = document.querySelector(target);
   var backdrop = document.querySelector("[data-ts-backdrop]");
   offcanvas.classList.remove("show");
+  setTimeout(function () {
+    offcanvas.classList.add('invisible');
+  }, 250);
   if (backdrop) {
     backdrop.classList.add("delay-100", "opacity-0");
     document.documentElement.style.overflow = "";
