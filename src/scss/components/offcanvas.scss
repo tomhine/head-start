@@ -4,6 +4,10 @@
 
     &-start {
       @apply top-0 left-0 w-full -translate-x-full;
+
+      &.show {
+        @apply -translate-x-full;
+      }
     }
 
     &-end {
@@ -15,6 +19,10 @@
 
       &:not(.hiding) {
         @apply transform-none;
+      }
+
+      &.hiding {
+        @apply translate-x-full;
       }
     }
 
