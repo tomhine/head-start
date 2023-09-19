@@ -3,7 +3,7 @@
     @apply fixed bottom-0 z-50 bg-white max-w-md flex flex-col invisible transform transition;
 
     &-start {
-      @apply top-0 left-0 w-full;
+      @apply top-0 left-0 w-full -translate-x-full;
 
       &.moving {
         @apply -translate-x-full;
@@ -11,7 +11,7 @@
     }
 
     &-end {
-      @apply right-0;
+      @apply top-0 right-0 w-full -translate-x-full;
 
       &.moving {
         @apply translate-x-full;

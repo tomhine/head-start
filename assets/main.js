@@ -51,19 +51,19 @@ function openOffcanvas(target) {
     backdrop.classList.remove("opacity-0");
   }, 0);
   document.documentElement.style.overflow = "hidden";
-  offcanvas.classList.add("moving");
+  offcanvas.classList.add("showing");
   offcanvas.classList.add("show");
   setTimeout(function () {
-    offcanvas.classList.remove("moving");
+    offcanvas.classList.remove("showing");
   }, 250);
 }
 function closeOffcanvas(target) {
   var offcanvas = document.querySelector(target);
   var backdrop = document.querySelector("[data-ts-backdrop]");
-  offcanvas.classList.add("moving");
+  offcanvas.classList.add("hiding");
   setTimeout(function () {
-    offcanvas.classList.remove('moving');
     offcanvas.classList.remove("show");
+    offcanvas.classList.remove('hiding');
   }, 250);
   if (backdrop) {
     backdrop.classList.add("delay-100", "opacity-0");
