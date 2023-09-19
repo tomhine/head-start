@@ -52,10 +52,10 @@ function openOffcanvas(target) {
   }, 0);
   document.documentElement.style.overflow = "hidden";
   offcanvas.classList.add("moving");
+  offcanvas.classList.add("show");
   setTimeout(function () {
     offcanvas.classList.remove("moving");
   }, 250);
-  offcanvas.classList.add("show");
 }
 function closeOffcanvas(target) {
   var offcanvas = document.querySelector(target);

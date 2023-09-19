@@ -36,10 +36,10 @@ function openOffcanvas(target) {
     document.documentElement.style.overflow = "hidden";
 
     offcanvas.classList.add("moving");
+    offcanvas.classList.add("show");
     setTimeout(() => {
         offcanvas.classList.remove("moving");
     }, 250);
-    offcanvas.classList.add("show");
 }
 
 function closeOffcanvas(target) {
