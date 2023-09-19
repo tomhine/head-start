@@ -3,7 +3,7 @@
         <button type="button" class="btn btn-icon" data-ts-dismiss="offcanvas" data-ts-target="#mobileMenu" aria-label="Close">
             {% render 'icon-close' %}
         </button>
-        <h5 class="text-lg font-semibold" id="mobileMenuLabel">{{ section.settings.title }}</h5>
+        <h5 class="text-lg font-semibold {% if section.settings.hide_title %} sr-only {% endif %}" id="mobileMenuLabel">{{ section.settings.title }}</h5>
     </div>
     <div class="p-4">
         <div>
