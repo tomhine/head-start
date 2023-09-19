@@ -522,6 +522,7 @@ video {
   }
 }
 .offcanvas {
+  visibility: hidden;
   position: absolute;
   top: 0px;
   z-index: 50;
@@ -539,17 +540,25 @@ video {
 }
 .offcanvas-start {
   left: 0px;
+}
+.offcanvas-start.moving {
   --tw-translate-x: -100%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .offcanvas-end {
   right: 0px;
+}
+.offcanvas-end.moving {
   --tw-translate-x: 100%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .offcanvas.show {
+  visibility: visible;
   --tw-translate-x: 0px;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.offcanvas.moving {
+  visibility: visible;
 }
 .offcanvas-backdrop {
   position: fixed;
@@ -723,9 +732,6 @@ video {
 }
 .gap-4 {
   gap: 1rem;
-}
-.overflow-x-hidden {
-  overflow-x: hidden;
 }
 .rounded {
   border-radius: 0.25rem;
