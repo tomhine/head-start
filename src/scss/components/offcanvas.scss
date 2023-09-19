@@ -5,7 +5,7 @@
     &-start {
       @apply top-0 left-0 w-full -translate-x-full;
 
-      &.hiding {
+      &.show.hiding {
         @apply -translate-x-full;
       }
     }
@@ -13,7 +13,7 @@
     &-end {
       @apply top-0 right-0 w-full translate-x-full;
 
-      &.hiding {
+      &.show.hiding {
         @apply translate-x-full;
       }
     }
@@ -24,6 +24,7 @@
       &:not(.hiding) {
         @apply transform-none;
       }
+
     }
 
     &.showing {
