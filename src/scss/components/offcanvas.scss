@@ -1,9 +1,9 @@
 @layer components {
   .offcanvas {
-    @apply absolute z-50 bg-white w-full max-w-md min-h-screen top-0 invisible;
+    @apply fixed bottom-0 z-50 bg-white max-w-md flex flex-col invisible transform transition;
 
     &-start {
-      @apply left-0;
+      @apply top-0 left-0 w-full;
 
       &.moving {
         @apply -translate-x-full;
@@ -20,10 +20,18 @@
 
     &.show {
       @apply translate-x-0 visible;
+
+      &:not(.hiding) {
+        @apply transform-none;
+      }
     }
 
-    &.moving {
-      @apply transform transition duration-300 visible;
+    &.showing {
+      @apply transform-none visible;
+    }
+
+    &.hiding {
+      @apply visible;
     }
 
     &-backdrop {

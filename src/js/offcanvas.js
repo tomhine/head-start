@@ -35,10 +35,10 @@ function openOffcanvas(target) {
 
     document.documentElement.style.overflow = "hidden";
 
-    offcanvas.classList.add("moving");
+    offcanvas.classList.add("showing");
     offcanvas.classList.add("show");
     setTimeout(() => {
-        offcanvas.classList.remove("moving");
+        offcanvas.classList.remove("showing");
     }, 250);
 }
 
@@ -46,11 +46,11 @@ function closeOffcanvas(target) {
     const offcanvas = document.querySelector(target);
     const backdrop = document.querySelector("[data-ts-backdrop]");
 
-    offcanvas.classList.add("moving");
+    offcanvas.classList.add("hiding");
 
     setTimeout(() => {
-        offcanvas.classList.remove('moving');
         offcanvas.classList.remove("show");
+        offcanvas.classList.remove('hiding');
     }, 250);
 
     if (backdrop) {
