@@ -8,10 +8,24 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/surf-bg.webp"
           }
+        },
+        "7fda3934-a5e6-429e-950b-d29164eed45c": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/blue-sea-crashes-against-yellowstone-cliffs.jpg"
+          }
+        },
+        "312d5672-c28d-4e87-b219-d7cc9bb442f3": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/sunlight-streaked-sea.jpg"
+          }
         }
       },
       "block_order": [
-        "016a8ce5-8968-4510-b527-80c2ac095f26"
+        "016a8ce5-8968-4510-b527-80c2ac095f26",
+        "7fda3934-a5e6-429e-950b-d29164eed45c",
+        "312d5672-c28d-4e87-b219-d7cc9bb442f3"
       ],
       "settings": {
       }
