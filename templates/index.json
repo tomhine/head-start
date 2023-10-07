@@ -8,10 +8,17 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/surf-bg.webp"
           }
+        },
+        "7fda3934-a5e6-429e-950b-d29164eed45c": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/blue-sea-crashes-against-yellowstone-cliffs.jpg"
+          }
         }
       },
       "block_order": [
-        "016a8ce5-8968-4510-b527-80c2ac095f26"
+        "016a8ce5-8968-4510-b527-80c2ac095f26",
+        "7fda3934-a5e6-429e-950b-d29164eed45c"
       ],
       "settings": {
       }
