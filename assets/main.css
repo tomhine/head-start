@@ -1141,12 +1141,6 @@ input:checked + .toggle-bg {
 .mb-4 {
   margin-bottom: 1rem;
 }
-.mr-2 {
-  margin-right: 0.5rem;
-}
-.mr-2\.5 {
-  margin-right: 0.625rem;
-}
 .mt-2 {
   margin-top: 0.5rem;
 }
