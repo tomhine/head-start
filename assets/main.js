@@ -21,6 +21,7 @@ __webpack_require__.r(__webpack_exports__);
   \*****************************/
 /***/ (() => {
 
+var timeoutLength = 1000;
 document.addEventListener("DOMContentLoaded", function () {
   var offcanvasToggles = document.querySelectorAll("[data-ts-toggle=offcanvas]");
   offcanvasToggles.forEach(function (toggle) {
@@ -49,13 +50,13 @@ function openOffcanvas(target) {
   document.body.appendChild(backdrop);
   setTimeout(function () {
     backdrop.classList.remove("opacity-0");
-  }, 0);
+  }, timeoutLength);
   document.documentElement.style.overflow = "hidden";
   offcanvas.classList.add("showing");
   offcanvas.classList.add("show");
   setTimeout(function () {
     offcanvas.classList.remove("showing");
-  }, 250);
+  }, timeoutLength);
 }
 function closeOffcanvas(target) {
   var offcanvas = document.querySelector(target);
@@ -63,14 +64,14 @@ function closeOffcanvas(target) {
   offcanvas.classList.add("hiding");
   setTimeout(function () {
     offcanvas.classList.remove("show");
-    offcanvas.classList.remove('hiding');
-  }, 250);
+    offcanvas.classList.remove("hiding");
+  }, timeoutLength);
   if (backdrop) {
     backdrop.classList.add("delay-100", "opacity-0");
     document.documentElement.style.overflow = "";
     setTimeout(function () {
       backdrop.remove();
-    }, 250);
+    }, timeoutLength);
   }
 }
 
