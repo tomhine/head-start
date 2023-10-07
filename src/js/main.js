@@ -1,1 +1,1 @@
-import './offcanvas';
+import 'flowbite';

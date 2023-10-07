@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import 'components/offcanvas';
-
 @layer base {
   svg {
     @apply pointer-events-none;
