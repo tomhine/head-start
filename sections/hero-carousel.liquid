@@ -5,8 +5,8 @@
         {% for block in section.blocks %}
             {% case block.type %}
                 {% when 'slide' %}
-                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                        {{ block.settings.image | image_url: width: 'full' | image_tag }}
+                    <div class="duration-700 ease-in-out {% unless forloop.first %} hidden {% endunless %}" data-carousel-item>
+                        {{ block.settings.image | image_url: width: nil | image_tag }}
                     </div>
             {% endcase %}
         {% endfor %}
