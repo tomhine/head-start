@@ -1189,11 +1189,11 @@ input:checked + .toggle-bg {
 .h-4 {
   height: 1rem;
 }
-.h-56 {
-  height: 14rem;
-}
 .h-6 {
   height: 1.5rem;
+}
+.h-72 {
+  height: 18rem;
 }
 .h-8 {
   height: 2rem;
@@ -1431,6 +1431,10 @@ input:checked + .toggle-bg {
 }
 .bg-opacity-50 {
   --tw-bg-opacity: 0.5;
+}
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .p-1 {
   padding: 0.25rem;

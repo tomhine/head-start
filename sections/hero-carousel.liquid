@@ -1,12 +1,12 @@
 <div id="hero-carousel" class="relative w-full" data-carousel="slide">
     <!-- Carousel items -->
-    <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+    <div class="relative h-72 overflow-hidden rounded-lg md:h-96">
 
         {% for block in section.blocks %}
             {% case block.type %}
                 {% when 'slide' %}
                     <div class="duration-700 ease-in-out {% unless forloop.first %} hidden {% endunless %}" data-carousel-item>
-                        {{ block.settings.image | image_url: width: nil | image_tag }}
+                        {{ block.settings.image | image_url: width: nil | image_tag: class: 'object-cover w-full h-full' }}
                     </div>
             {% endcase %}
         {% endfor %}
