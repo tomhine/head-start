@@ -1,5 +1,21 @@
 {
   "sections": {
+    "9146b520-ca4b-45ea-b5ec-6dac06704a43": {
+      "type": "hero-carousel",
+      "blocks": {
+        "016a8ce5-8968-4510-b527-80c2ac095f26": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/surf-bg.webp"
+          }
+        }
+      },
+      "block_order": [
+        "016a8ce5-8968-4510-b527-80c2ac095f26"
+      ],
+      "settings": {
+      }
+    },
     "main": {
       "type": "hero",
       "settings": {
@@ -17,6 +33,7 @@
     }
   },
   "order": [
+    "9146b520-ca4b-45ea-b5ec-6dac06704a43",
     "main",
     "product-carousel"
   ]
