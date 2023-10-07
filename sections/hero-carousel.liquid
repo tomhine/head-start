@@ -6,7 +6,7 @@
             {% case block.type %}
                 {% when 'slide' %}
                     <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                        {{ block.settings.image | image_url: width: nil | image_tag }}
+                        {{ block.settings.image | image_url: width: 'master' | image_tag }}
                     </div>
             {% endcase %}
         {% endfor %}
