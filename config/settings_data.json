@@ -1,5 +1,6 @@
 {
   "current": {
+    "button_border_radius": 8,
     "sections": {
       "header": {
         "type": "header",
