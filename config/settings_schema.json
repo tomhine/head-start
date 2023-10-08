@@ -24,24 +24,44 @@
     ]
   },
   {
-    "name": "Header",
+    "name": "Colors",
     "settings": [
       {
         "type": "header",
-        "content": "Colors"
+        "content": "Primary"
       },
       {
         "type": "color_picker",
-        "label": "Background",
-        "id": "header_background_color",
-        "default": "#ffffff"
-      },
-      {
-        "type": "color_picker",
-        "label": "Text",
-        "id": "header_text_color",
+        "label": "Color",
+        "id": "primary_color",
         "default": "#000000"
+      },
+      {
+        "type": "color_picker",
+        "label": "Text color",
+        "id": "primary_text_color",
+        "default": "#ffffff"
       }
+    ]
+  },
+  {
+    "name": "Buttons",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Base options"
+      },
+      {
+        "type": "range",
+        "label": "Border radius",
+        "id": "button_border_radius",
+        "default": 0,
+        "min": 0,
+        "max": 120,
+        "step": 4,
+        "unit": "px"
+      },
+
     ]
   }
 ]

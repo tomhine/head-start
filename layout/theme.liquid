@@ -42,6 +42,9 @@
 
     {{ 'main.css' | asset_url | stylesheet_tag }}
 
+    {% comment %} User styles {% endcomment %}
+    {% render 'user-styles' %}
+
 </head>
 <body>
     {% comment %}{% section 'top-info-bar' %}{% endcomment %}

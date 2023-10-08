@@ -1,0 +1,12 @@
+{% style %}
+    {% comment %} Buttons {% endcomment %}
+    .btn {
+        border-radius: {{ settings.button_border_radius }}px;
+    }
+
+    .btn.btn-primary {
+        background-color: {{ settings.primary_color }};
+        border-color: {{ settings.primary_color }};
+        color: {{ settings.button_primary_text_color }};
+    }
+{% endstyle %}
