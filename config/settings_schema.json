@@ -31,13 +31,13 @@
         "content": "Primary"
       },
       {
-        "type": "color_picker",
+        "type": "color",
         "label": "Color",
         "id": "primary_color",
         "default": "#000000"
       },
       {
-        "type": "color_picker",
+        "type": "color",
         "label": "Text color",
         "id": "primary_text_color",
         "default": "#ffffff"
