@@ -1,0 +1,20 @@
+<div class="w-full">
+    <div class="container md:grid md:grid-cols-2 items-center justify-items-center">
+        {% comment %} Product images {% endcomment %}
+        <div>
+            {% render 'product-media', media: product.media[0], width: 600, height: 600, defer: defer %}
+        </div>
+
+        {% comment %} Product title, description, price {% endcomment %}
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "Product",
+  "tag": "section",
+  "class": "main-product-section",
+  "settings": [
+  ]
+}
+{% endschema %}

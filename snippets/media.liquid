@@ -1,0 +1,10 @@
+{% case media.media_type %}
+	{% when 'image' %}
+		{{ media | img_tag: class: 'contain' }}
+	{% when 'external_video' %}
+		{{ media | external_video_tag: class: 'w-100 h-100 contain' }}
+	{% when 'video' %}
+		{{ media | video_tag: image_size: width | append: 'x' | append: height, controls: true, class: 'w-100 h-100 cover' }}
+	{% else %}
+		{{ media | media_tag }}
+{% endcase %}
