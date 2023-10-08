@@ -41,6 +41,34 @@
         "label": "Text color",
         "id": "primary_text_color",
         "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "label": "Active color",
+        "id": "primary_active_color",
+        "default": "#333333"
+      },
+      {
+        "type": "header",
+        "content": "Secondary"
+      },
+      {
+        "type": "color",
+        "label": "Color",
+        "id": "secondary_color",
+        "default": "#838883"
+      },
+      {
+        "type": "color",
+        "label": "Text color",
+        "id": "secondary_text_color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "label": "Active color",
+        "id": "secondary_active_color",
+        "default": "#333333"
       }
     ]
   },
@@ -57,8 +85,28 @@
         "id": "button_border_radius",
         "default": 0,
         "min": 0,
-        "max": 120,
-        "step": 4,
+        "max": 64,
+        "step": 2,
+        "unit": "px"
+      },
+      {
+        "type": "range",
+        "label": "Top & bottom padding",
+        "id": "button_top_bottom_padding",
+        "default": 0,
+        "min": 0,
+        "max": 32,
+        "step": 2,
+        "unit": "px"
+      },
+      {
+        "type": "range",
+        "label": "Left & right padding",
+        "id": "button_left_right_padding",
+        "default": 0,
+        "min": 0,
+        "max": 32,
+        "step": 2,
         "unit": "px"
       }
     ]

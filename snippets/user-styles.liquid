@@ -2,11 +2,38 @@
     {% comment %} Buttons {% endcomment %}
     .btn {
         border-radius: {{ settings.button_border_radius }}px;
+        padding: {{ settings.button_top_bottom_padding }}px {{ settings.button_left_right_padding }}px;
     }
 
     .btn.btn-primary {
         background-color: {{ settings.primary_color }};
         border-color: {{ settings.primary_color }};
-        color: {{ settings.button_primary_text_color }};
+        color: {{ settings.primary_text_color }};
+    }
+
+    .btn.btn-primary:hover {
+        background-color: {{ settings.primary_hover_color }};
+        border-color: {{ settings.primary_hover_color }};
+    }
+
+    .btn.btn-primary:active {
+        background-color: {{ settings.primary_color }};
+        border-color: {{ settings.primary_color }};
+    }
+
+    .btn.btn-secondary {
+        background-color: {{ settings.secondary_color }};
+        border-color: {{ settings.secondary_color }};
+        color: {{ settings.secondary_text_color }};
+    }
+
+    .btn.btn-secondary:hover {
+        background-color: {{ settings.secondary_hover_color }};
+        border-color: {{ settings.secondary_hover_color }};
+    }
+
+    .btn.btn-secondary:active {
+        background-color: {{ settings.secondary_color }};
+        border-color: {{ settings.secondary_color }};
     }
 {% endstyle %}
