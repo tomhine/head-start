@@ -44,8 +44,8 @@
       },
       {
         "type": "color",
-        "label": "Active color",
-        "id": "primary_active_color",
+        "label": "Hover color",
+        "id": "primary_hover_color",
         "default": "#333333"
       },
       {
@@ -66,8 +66,8 @@
       },
       {
         "type": "color",
-        "label": "Active color",
-        "id": "secondary_active_color",
+        "label": "Hover color",
+        "id": "secondary_hover_color",
         "default": "#333333"
       }
     ]
