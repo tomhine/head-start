@@ -2,7 +2,7 @@
     <div class="container md:grid md:grid-cols-2 items-center justify-items-center">
         {% comment %} Product images {% endcomment %}
         <div>
-            {% render 'media', media: product.media[0], width: 600, height: 600, defer: defer %}
+            {{ product | img_url: 'master' | img_tag: product.title, 'product-image' }}
         </div>
 
         {% comment %} Product title, description, price {% endcomment %}
