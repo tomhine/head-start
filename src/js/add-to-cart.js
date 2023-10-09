@@ -10,7 +10,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const variantId = form.dataset.variantId;
 
-        const [data, error] = await addToCart([{ variantId, quantity: 1 }]);
+        const [data, error] = await addToCart({
+            items: [
+                {
+                    variantId,
+                    quantity: 1
+                }
+            ]
+        });
 
         if (error) {
             console.error(error);
