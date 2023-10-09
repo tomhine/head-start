@@ -6,12 +6,18 @@
         </div>
 
         {% comment %} Product title, description, price {% endcomment %}
-        {% form 'product', product, class: 'p-4 md:p-6' %}
-            <h1 class="">{{ product.title }}</h1>
+        {% form 'product', product, class: 'flex flex-col gap-4 md:gap-6 p-4 md:p-6' %}
+            <div>
+                <h1>{{ product.title }}</h1>
 
-            <div class="flex flex-col md:flex-row gap-2 md:gap-4 md:justify-between md:items-center">
-                <p>{{ product.price | money }}</p>
-                <input type="submit" value="Add to cart" class="btn btn-primary">
+                <div class="flex flex-col md:flex-row gap-2 md:gap-4 md:justify-between md:items-center">
+                    <p class="h2">{{ product.price | money }}</p>
+                    <input type="submit" value="Add to cart" class="btn btn-primary">
+                </div>
+            </div>
+
+            <div>
+                <p>{{ product.description }}</p>
             </div>
         {% endform %}
     </div>

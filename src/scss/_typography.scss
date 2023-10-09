@@ -2,4 +2,8 @@
   h1, .h1 {
     @apply text-4xl font-extrabold tracking-tight;
   }
+
+    h2, .h2 {
+        @apply text-3xl font-extrabold tracking-tight;
+    }
 }
