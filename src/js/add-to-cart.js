@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const [data, error] = await addToCart({
             items: [
                 {
-                    variantId,
+                    id: variantId,
                     quantity: 1
                 }
             ]
