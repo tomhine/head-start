@@ -1,6 +1,6 @@
 {% case media.media_type %}
 	{% when 'image' %}
-		{{ media | img_tag: class: 'contain' }}
+		{{ media | img_tag: class: 'contain' | img_url: width: width, height: height }}
 	{% when 'external_video' %}
 		{{ media | external_video_tag: class: 'w-100 h-100 contain' }}
 	{% when 'video' %}
