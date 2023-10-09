@@ -6,7 +6,11 @@
         </div>
 
         {% comment %} Product title, description, price {% endcomment %}
-        {% form 'product', product, class: 'flex flex-col gap-4 md:gap-6 p-4 md:p-6', data-js-cart: 'true' %}
+        {% form 'product',
+            product, class: 'flex flex-col gap-4 md:gap-6 p-4 md:p-6',
+            data-js-cart: 'true',
+            data-variant-id: product.first_available_variant
+        %}
             <div class="flex flex-col gap-3 md:gap-4">
                 <h1>{{ product.title }}</h1>
 
