@@ -1,4 +1,4 @@
-import {addToCart} from "./cart-helpers";
+import { addToCart } from "./cart-helpers";
 
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.querySelector('form[data-js-cart="true"]');
@@ -24,7 +24,5 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             console.log(data);
         }
-
-        console.log('form submitted');
     });
 });
