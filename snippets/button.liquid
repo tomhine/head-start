@@ -19,12 +19,12 @@
     {% endif %}
 >
     {% if icon != blank and icon_start == true %}
-        {% render 'icon', name: '{{ icon }}' %}
+        {% render 'icon', name: icon %}
     {% endif %}
 
     {% if content != blank %} {{ content | escape }} {% endif %}
 
     {% if icon != blank and icon_start == blank %}
-        {% render 'icon', name: '{{ icon }}' %}
+        {% render 'icon', name: icon %}
     {% endif %}
 {% if href != blank %}</a>{% else %}</button>{% endif %}
