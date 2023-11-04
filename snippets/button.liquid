@@ -18,13 +18,13 @@
         {% endfor %}
     {% endif %}
 >
-    {% if icon != blank and icon_start %}
+    {% if icon != blank and icon_start == true %}
         {% render 'icon-{{ icon }}' %}
     {% endif %}
 
     {% if content != blank %} {{ content | escape }} {% endif %}
 
-    {% if icon != blank and !icon_start %}
+    {% if icon != blank and icon_start == false %}
         {% render 'icon-{{ icon }}' %}
     {% endif %}
 {% if href != blank %}</a>{% else %}</button>{% endif %}
