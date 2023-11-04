@@ -70,7 +70,7 @@
 
         {% comment %} Header right {% endcomment %}
         <div class="md:justify-self-end">
-            <button
+            {% comment %} <button
                 type="button"
                 class="btn btn-icon"
                 aria-label="View your cart"
@@ -80,7 +80,14 @@
                 data-drawer-placement="right"
             >
                 {% render 'icon-shopping-bag' %}
-            </button>
+            </button> {% endcomment %}
+
+            {% render 'button',
+                icon: 'shopping-bag',
+                label: 'View your cart',
+                controls: 'mini-cart',
+                data: 'drawer-target="mini-cart", drawer-show="mini-cart", drawer-placement="right"',
+            %}
         </div>
 
     </div>

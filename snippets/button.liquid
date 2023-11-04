@@ -8,8 +8,9 @@
     <button type="{{ type | default: 'button' }}"
 {% endif %}
 
-    class="inline-flex items-center justify-center border border-transparent shadow-sm text-base font-medium disabled:opacity-50 disabled:cursor-auto transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 ease-in-out duration-150 cursor-pointer btn btn-{{ level | default: 'primary' }} {{ class | default: '' }}"
-    {% if aria_label != blank %} aria-label="{{ aria_label | default: '' }}" {% endif %}
+    class="inline-flex items-center justify-center border border-transparent text-base font-medium disabled:opacity-50 disabled:cursor-auto transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 ease-in-out duration-150 cursor-pointer btn btn-{{ level | default: 'primary' }} {{ class | default: '' }} {% if icon != blank and content == blank %} p-1 {% else %} shadow-sm {% endif %}"
+    {% if label != blank %} aria-label="{{ aria_label | default: '' }}" {% endif %}
+    {% if controls != blank %} aria-controls="{{ aria_controls | default: '' }}" {% endif %}
 
     {% if data.size > 0 %}
         {% for attr in data %}
@@ -17,5 +18,13 @@
         {% endfor %}
     {% endif %}
 >
-    {{ content | escape }}
+    {% if icon != blank and icon_start %}
+        {% render 'icon-{{ icon }}' %}
+    {% endif %}
+
+    {% if content != blank %} {{ content | escape }} {% endif %}
+
+    {% if icon != blank and !icon_start %}
+        {% render 'icon-{{ icon }}' %}
+    {% endif %}
 {% if href != blank %}</a>{% else %}</button>{% endif %}
