@@ -1,7 +1,7 @@
 {% if data.size > 0 %}
     {% assign data = data | split: ', ' %}
     {% for attr in data %}
-        <p>{{ attrs | raw }}</p>
+        <p>{{ attrs }}</p>
     {% endfor %}
 {% endif %}
 
