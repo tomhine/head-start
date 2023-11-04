@@ -5,7 +5,7 @@
         focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500
         ease-in-out duration-150 cursor-pointer btn btn-{{ level | default: 'primary' }}
         {{ class | default: '' }}"
-    {% for attrs in data %}
+    {% for attrs in data | split: ', ' %}
         {{ attrs | raw }}
     {% endfor %}
 >
