@@ -14,7 +14,7 @@
         {{ class | default: '' }}"
     {% if data.size > 0 %}
         {% for attr in data %}
-            {{ attr }}
+            data-{{ attr | raw }}
         {% endfor %}
     {% endif %}
 >
