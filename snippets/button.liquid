@@ -1,5 +1,8 @@
 {% if data.size > 0 %}
     {% assign data = data | split: ', ' %}
+    {% for attr in data %}
+        <p>{{ attrs | raw }}</p>
+    {% endfor %}
 {% endif %}
 
 <button
