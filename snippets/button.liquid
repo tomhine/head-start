@@ -2,9 +2,14 @@
     {% assign data = data | split: ', ' %}
 {% endif %}
 
-<button
-    type="{{ type | default: 'button' }}"
+<{{ as | default 'button' }}
+    {% if as == 'a' %}
+        href="{{ href | default: '#' }}"
+    {% else %}    
+        type="{{ type | default: 'button' }}"
+    {% endif %}
     class="inline-flex items-center justify-center border border-transparent shadow-sm text-base font-medium disabled:opacity-50 disabled:cursor-auto transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 ease-in-out duration-150 cursor-pointer btn btn-{{ level | default: 'primary' }} {{ class | default: '' }}"
+    aria-label="{{ aria_label | default: '' }}"
     {% if data.size > 0 %}
         {% for attr in data %}
             data-{{ attr | raw }}
@@ -12,4 +17,4 @@
     {% endif %}
 >
     {{ content | escape }}
-</button>
+</{{ as | default: 'button' }}>
