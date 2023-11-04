@@ -2,7 +2,7 @@
     {% assign data = data | split: ', ' %}
 {% endif %}
 
-<{{ as | default 'button' }}
+<{{ as | default: 'button' }}
     {% if as == 'a' %}
         href="{{ href | default: '#' }}"
     {% else %}    
