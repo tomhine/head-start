@@ -3,6 +3,7 @@
 
   <div class="flex gap-4 items-center">
     <button type="button" class="btn btn-primary">Primary</button>
+    {% render "button", content: "Primary", data: ['hello="there"', 'lets=go'] %}
     <button type="button" class="btn btn-secondary">Secondary</button>
   </div>
 
