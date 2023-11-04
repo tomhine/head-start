@@ -1,7 +1,7 @@
 {% if data.size > 0 %}
     {% assign data = data | split: ', ' %}
     {% for attr in data %}
-        <p>{{ attrs }}</p>
+        <p>{{ attr }}</p>
     {% endfor %}
 {% endif %}
 
@@ -14,7 +14,7 @@
         {{ class | default: '' }}"
     {% if data.size > 0 %}
         {% for attr in data %}
-            {{ attrs }}
+            {{ attr }}
         {% endfor %}
     {% endif %}
 >
