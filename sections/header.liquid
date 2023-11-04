@@ -5,17 +5,6 @@
         <div class="min-w-max flex items-center gap-4 md:justify-self-start">
             {% comment %} Mobile nav toggle {% endcomment %}
             <div class="md:hidden">
-                <button
-                    type="button"
-                    class="btn btn-icon"
-                    aria-label="toggle the mobile menu"
-                    data-drawer-target="mobile-menu"
-                    data-drawer-show="mobile-menu"
-                    aria-controls="mobile-menu"
-                >
-                    {% render 'icon', name: 'menu' %}
-                </button>
-
                 {% render 'button',
                     icon: 'menu',
                     label: 'toggle the mobile menu',
