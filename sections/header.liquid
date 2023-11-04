@@ -13,7 +13,7 @@
                     data-drawer-show="mobile-menu"
                     aria-controls="mobile-menu"
                 >
-                    {% render 'icons', icon: 'menu' %}
+                    {% render 'icon', name: 'menu' %}
                 </button>
             </div>
 
@@ -50,7 +50,7 @@
                         <a href="{{ link.url }}" class="md:mx-4 flex items-center gap-4 p-4 md:px-0" data-nav="header-desktop" data-nav-location="{{ link.url }}" data-nav-text="{{ link.title }}">
                             {{ link.title | escape }}
                             <span>
-                                {% if link.links.size > 0 %} {% render 'icons', icon: 'chevron-down', class: 'verical-align-unset' %} {% endif %}
+                                {% if link.links.size > 0 %} {% render 'icon', name: 'chevron-down', class: 'verical-align-unset' %} {% endif %}
                             </span>
                         </a>
                         {% if link.links.size > 0 %}
@@ -79,7 +79,7 @@
                 aria-controls="mini-cart"
                 data-drawer-placement="right"
             >
-                {% render 'icons', icon: 'shopping-bag' %}
+                {% render 'icon', name: 'shopping-bag' %}
             </button> {% endcomment %}
 
             {% render 'button',
