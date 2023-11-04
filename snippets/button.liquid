@@ -1,3 +1,10 @@
+{% liquid
+    if data.size > 0
+        data = data | split: ', '
+    else
+        data = ''
+%}
+
 <button
     type="{{ type | default: 'button' }}"
     class="inline-flex items-center justify-center border border-transparent shadow-sm
@@ -5,9 +12,11 @@
         focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500
         ease-in-out duration-150 cursor-pointer btn btn-{{ level | default: 'primary' }}
         {{ class | default: '' }}"
-    {% for attrs in data | split: ', ' %}
-        {{ attrs | raw }}
-    {% endfor %}
+    {% if data.size > 0 %}
+        {% for attrs in data %}
+            {{ attrs | raw }}
+        {% endfor %}
+    {% endif %}
 >
     {{ content | escape }}
 </button>
