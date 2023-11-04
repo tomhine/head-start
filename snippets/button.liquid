@@ -1,9 +1,6 @@
-{% liquid
-    if data.size > 0
-        data = data | split: ', '
-    else
-        data = ''
-%}
+{% if data.size > 0 %}
+    {% assign data = data | split: ', ' %}
+{% endif %}
 
 <button
     type="{{ type | default: 'button' }}"
@@ -13,7 +10,7 @@
         ease-in-out duration-150 cursor-pointer btn btn-{{ level | default: 'primary' }}
         {{ class | default: '' }}"
     {% if data.size > 0 %}
-        {% for attrs in data %}
+        {% for attr in data %}
             {{ attrs | raw }}
         {% endfor %}
     {% endif %}
