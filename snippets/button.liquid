@@ -2,12 +2,11 @@
     {% assign data = data | split: ', ' %}
 {% endif %}
 
-<{% if href != blank %}a{% else %}button{% endif %}
-    {% if href != blank %}
-        href="{{ href | default: '#' }}"
-    {% else %}    
-        type="{{ type | default: 'button' }}"
-    {% endif %}
+{% if href != blank %}
+    <a href="{{ href | default: '#' }}"
+{% else %}
+    <button type="{{ type | default: 'button' }}"
+{% endif %}
 
     class="inline-flex items-center justify-center border border-transparent shadow-sm text-base font-medium disabled:opacity-50 disabled:cursor-auto transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 ease-in-out duration-150 cursor-pointer btn btn-{{ level | default: 'primary' }} {{ class | default: '' }}"
     aria-label="{{ aria_label | default: '' }}"
@@ -19,4 +18,4 @@
     {% endif %}
 >
     {{ content | escape }}
-</{% if href != blank %}a{% else %}button{% endif %}
+{% if href != blank %}</a>{% else %}</button>{% endif %}
