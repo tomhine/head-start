@@ -16,7 +16,7 @@
 
                 <div class="flex flex-col md:flex-row gap-2 md:gap-4 md:justify-between md:items-center">
                     <p class="h4">{{ product.price | money }}</p>
-                    <input type="submit" value="Add to cart" class="btn btn-primary">
+                    {% render 'button', type: 'submit', content: 'Add to cart' %}
                 </div>
             </div>
 
